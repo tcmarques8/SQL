@@ -1,0 +1,34 @@
+create TABLE Student(
+  numstud INT not NULL,
+  firstname CHAR(15) not NULL,
+  lastname CHAR(15) not NULL,
+  dateofbirth DATE NOT NULL,
+  street CHAR(50) NOT NULL,
+  postalcode CHAR(10) NOT NULL,
+  city CHAR(20) not NULL,
+  PRIMARY KEY (numstud)
+);
+
+CREATE TABLE Matter(
+  codemat CHAR(20) not NULL,
+  wording CHAR(50) not NULL,
+  coef FLOAT not NULL,
+  PRIMARY KEY (codemat)
+);
+
+create table Test(
+  numtest INT not NULL,
+  testdate DATE not NULL,
+  place CHAR(20) not NULL,
+  codemat CHAR(20) not NULL,
+  PRIMARY KEY (numtest),
+  CONSTRAINT FK_codemat FOREIGN KEY (codemat) REFERENCES Matter(codemat)
+);
+
+CREATE TABLE Notation(
+  numstud INT NOT NULL,
+  numtest INT not NULL,
+  score FLOAT not NULL,
+  CONSTRAINT FK_numstud FOREIGN KEY (numstud) REFERENCES Student(numstud),
+  CONSTRAINT FK_numtest FOREIGN KEY (numtest) REFERENCES Test(numtest)
+);

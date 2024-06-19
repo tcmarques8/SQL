@@ -1,0 +1,5 @@
+-- Wording and coefficient (expressed as a percentage) of each subject
+SELECT wording, concat(coef*100, '%') as Coef from Matter;
+
+-- Sum of coefficients of all subject
+SELECT SUM(coef) from Matter;

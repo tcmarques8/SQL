@@ -1,0 +1,18 @@
+-- List of all students
+SELECT * from Student;
+
+-- List of all students, sorted in reverse alphabetical order
+SELECT * FROM Student
+ORDER BY firstname DESC;
+
+-- Last name and first name of students domiciled in Frankfurt
+SELECT lastname, firstname from Student
+where city LIKE 'Frankfurt';
+
+-- Last name, first name and city of students whose city contains the string « LL »
+SELECT lastname, firstname, city from Student
+where city like '%ll%';
+
+-- First name of students with Dupont, Durand or Martin names
+select firstname from Student
+where lastname = 'Durant' or lastname = 'Dupong' OR lastname = 'Martin';

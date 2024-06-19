@@ -1,0 +1,59 @@
+insert INTO Student (numstud, firstname, lastname, dateofbirth, street, postalcode, city)
+VALUES
+(1, 'Kevin', 'Durant', '1994-04-26', '4600 9th Ave', '11220', 'New York'),
+(2, 'David', 'Martin', '1995-01-18', '16-36 Av. de Vaucresson', '78150', 'Versailles'),
+(3, 'Guillaume', 'Lalung', '1994-11-06', '2-22 Rue André Marie Ampère', '78150', 'Versailles'),
+(4, 'Jérémy', 'Dupong', '1994-07-17', '350 Grand St', '10002', 'New York'),
+(5, 'David', 'Beckam', '1993-03-21', '666 Broadway', '10012', 'New York'),
+(6, 'Alejandro', 'Torres', '1995-09-25', 'Tr.ª Santo Domingo, 16', '36700', 'Tuy'),
+(7, 'Anthony', 'Timothee', '1994-12-04', 'Im Trutz Frankfurt 35', '60322', 'Frankfurt');
+
+INSERT INTO Matter (codemat, wording, coef)
+VALUES
+('AP', 'Advanced Physics', 1),
+('APM', 'Applied Mathematics', 1.2),
+('ADM', 'Advanced Mathematics', 1.5);
+
+INSERT into Notation (numstud, numtest, score)
+VALUES
+(1,1,20),
+(1,2,17),
+(1,3,18),
+(1,4,17),
+(2,1,10),
+(2,2,9),
+(2,3,12),
+(2,4,4),
+(2,5,11),
+(3,1,11),
+(3,2,16),
+(3,3,13),
+(3,4,20),
+(4,1,10),
+(4,2,20),
+(4,3,11),
+(4,4,13),
+(4,5,9),
+(5,1,9),
+(5,2,11),
+(5,3,12),
+(5,4,10),
+(6,1,7),
+(6,2,9),
+(6,3,10),
+(6,4,14),
+(6,6,12),
+(7,1,8),
+(7,2,8),
+(7,3,10),
+(7,4,10),
+(7,6,13);
+
+insert into Test (numtest, testdate, place, codemat)
+VALUES
+(1,'2014-03-30','Classroom 4B','AP'),
+(2,'2014-04-22','Classroom 2C','ADM'),
+(3,'2014-06-04','Classroom 1A','APM'),
+(4,'2014-07-01','Classroom 2D','APM'),
+(5,'2014-07-26','Classroom 1C','ADM & APM'),
+(6,'2014-07-29','Classroom 1D','ADM & AP');
